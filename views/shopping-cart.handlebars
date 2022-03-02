@@ -1,0 +1,17 @@
+{{!-- rendered with user object? --}}
+<section>
+  <h2>{{username}}'s Cart</h2>
+  {{#if cart}}
+  <p>You have no items in your cart</p>
+  {{else}}
+  <p>You have {{cart.item_count}} items in your cart.</p>
+  {{>shopping-cart cart.items}}
+  {{!-- totalItems would be a helper function that would --}}
+  {{!-- add up the price value of each item in the cart --}}
+  <p>Your total is {{totalItems cart.items}}</p>
+  <button class="checkout-btn">Checkout</button>
+  {{/if}}
+</section>
+{{#if loggedIn}}
+<script src="/javascript/checkout.js"></script>
+{{/if}}
