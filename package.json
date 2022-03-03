@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Nate-Huerd/Fav-Mates/issues"
   },
-  "homepage": "https://github.com/Nate-Huerd/Fav-Mates#readme"
+  "homepage": "https://github.com/Nate-Huerd/Fav-Mates#readme",
+  "dependencies": {
+    "restaurant-menu": "^1.0.2"
+  }
 }
