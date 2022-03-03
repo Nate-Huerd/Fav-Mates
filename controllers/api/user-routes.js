@@ -1,6 +1,40 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+// get all users
+router.get('/', (req,res) => {
+  User.findAll({
+    attributes: ['id', 'username']
+  })
+  .then(dbUserData => res.json(dbUserData))
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  })
+});
+
+// get one user by id
+router.get('/:id', (req, res) => {
+  User.findOne({
+    attributes: ['id', 'username'],
+    where: {
+      id: req.params.id
+    },
+    /* include: [
+      other stuff from other tables
+     ] */
+  })
+  .then(dbUserData => {
+    if (!dbUserData) {
+      res.status(404).json({ message: 'No user with this id' });
+      return;
+    }
+    res.json(dbUserData);
+  })
+  .catch(err => res.status(500).json(err));
+
+})
+
 // login a registered user
 router.post('/login', (req, res) => {
   User.findOne({
@@ -48,7 +82,6 @@ router.post('/', (req, res) => {
       req.session.loggedIn = true;
       req.session.cart = [];
 
-      console.log(req.session.cart);
       res.json(dbUserData);
     })
   })
