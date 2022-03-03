@@ -103,4 +103,23 @@ router.post('/logout', (req, res) => {
   }
 });
 
+router.delete('/:id', (req, res) => {
+  User.destroy({
+    where: {
+      id: req.params.id,
+    },
+  })
+  .then(dbUserData => {
+    if (!dbUserData) {
+      res.status(404).json({ message: 'No user with that id' });
+      return;
+    }
+    res.json(dbUserData);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+});
+
 module.exports = router;
