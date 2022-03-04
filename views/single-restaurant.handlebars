@@ -1,6 +1,6 @@
-<h2 class="restaurant-name">{{name}}</h2>
+<h2 class="restaurant-name">{{restaurant.name}}</h2>
 
-{{>menu-items items}}
+{{>menu-items restaurant.menus}}
 
 {{#if loggedIn}}
 <script src="/javascript/add-to-cart.js"></script>
