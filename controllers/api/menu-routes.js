@@ -13,6 +13,7 @@ router.get('/', (req, res) => {
   })
 });
 
+// get one menu item
 router.get('/:id', (req, res) => {
   Menu.findOne({
     attributes: ['id', 'name', 'price', 'restaurant_id'],
@@ -60,5 +61,10 @@ router.delete('/:id', (req, res) => {
     res.status(500).json(err);
   })
 });
+
+// add items to user's cart
+router.post('/addtocart', (req, res) => {
+  
+})
 
 module.exports = router
