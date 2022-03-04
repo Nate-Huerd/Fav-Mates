@@ -471,10 +471,10 @@ const Menu = [
     }
   ];
 
-  module.exports  = Menu;
+  module.exports = Menu;
 
   /*
-  const menu = require("restaurant-menu");
+  const Menu = require('../seeds/menu-seeds');
    
    console.log(menu[0].name);   // it will return "VEG SOUP"
    console.log(menu[0].items);  // it will return [ 'Sweet Corn Soup','Manchow Soup','Clear Soup','Hot & Sour Soup','Cream of Tomato Soup','Veg Noodles Soup','Veg Lemon Coriander Soup' ]
