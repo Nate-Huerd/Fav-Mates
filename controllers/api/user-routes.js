@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Menu } = require('../../models');
 
 // get all users
 router.get('/', (req,res) => {
@@ -121,6 +121,21 @@ router.delete('/:id', (req, res) => {
     console.log(err);
     res.status(500).json(err);
   });
+});
+
+// add items to user's cart
+router.post('/order', (req, res) => {
+  Menu.findAll({
+    where: {
+      id: req.body.order
+    }
+  }).then(dbMenuData => {
+    dbMenuData.forEach(item => req.session.cart.push(item));
+    res.json(req.session.cart)
+  }).catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  })
 });
 
 module.exports = router;

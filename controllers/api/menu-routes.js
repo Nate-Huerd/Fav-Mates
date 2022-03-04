@@ -62,9 +62,4 @@ router.delete('/:id', (req, res) => {
   })
 });
 
-// add items to user's cart
-router.post('/addtocart', (req, res) => {
-  
-})
-
 module.exports = router

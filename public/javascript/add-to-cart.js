@@ -1,8 +1,10 @@
+
+
 let clicked = 0;
 let orderArray = [];
 
 function orderToSession(order) {
-  
+
 }
 
 function addToCart(e) {
