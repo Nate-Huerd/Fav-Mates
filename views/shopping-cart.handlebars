@@ -1,17 +1,16 @@
-{{!-- rendered with user object? --}}
+{{!-- rendered with session object? will have username and cart info --}}
 <section>
   <h2>{{username}}'s Cart</h2>
-  {{#if cart}}
-  <p>You have no items in your cart</p>
-  {{else}}
-  <p>You have {{cart.item_count}} items in your cart.</p>
-  {{>shopping-cart cart.items}}
-  {{!-- totalItems would be a helper function that would --}}
+  {{!-- checkCart is a helper function that returns true if cartArray is not empty --}}
+  {{#if checkCart cart}}
+  <p>You have {{checkCount cart}} items in your cart.</p>
+  {{>menu-items-preview cart}}
+  {{!-- totalItems is a helper function that will --}}
   {{!-- add up the price value of each item in the cart --}}
-  <p>Your total is {{totalItems cart.items}}</p>
+  <p>Your total is {{totalItems cart}}</p>
   <button class="checkout-btn">Checkout</button>
+  {{else}}
+  <p>You have no items in your cart</p>
   {{/if}}
 </section>
-{{#if loggedIn}}
 <script src="/javascript/checkout.js"></script>
-{{/if}}
