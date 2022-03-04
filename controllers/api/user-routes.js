@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const sequelize = require('../../config/connection');
 const { User, Menu } = require('../../models');
 
 // get all users
@@ -125,12 +126,17 @@ router.delete('/:id', (req, res) => {
 
 // add items to user's cart
 router.post('/order', (req, res) => {
+  // console.log(req.session.cart);
   Menu.findAll({
     where: {
-      id: req.body.order
+      id: req.body.orderArray
     }
   }).then(dbMenuData => {
-    dbMenuData.forEach(item => req.session.cart.push(item));
+    let cart =dbMenuData.map(item => item.get({ plain: true}));    
+    // console.log(cart);
+
+    req.session.cart = cart;
+    console.log(req.session);
     res.json(req.session.cart)
   }).catch(err => {
     console.log(err);
