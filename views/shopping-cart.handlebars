@@ -2,7 +2,7 @@
 <section>
   <h2>{{username}}'s Cart</h2>
   {{!-- checkCart is a helper function that returns true if cartArray is not empty --}}
-  {{#if checkCart cart}}
+  {{#if cart}}
   <p>You have {{checkCount cart}} items in your cart.</p>
   {{>menu-items-preview cart}}
   {{!-- totalItems is a helper function that will --}}
