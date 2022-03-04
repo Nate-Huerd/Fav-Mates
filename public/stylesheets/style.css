@@ -1,7 +1,6 @@
 /**
  * Body CSS
  */
-
  html,
  body {
    height: 100%;
@@ -21,7 +20,6 @@
  /**
   * Header CSS
   */
- 
  header {
    position: fixed;
    top: 0;
@@ -46,24 +44,23 @@
  /**
   * Content CSS
   */
- 
  #content-wrapper {
-   box-sizing: border-box;
    min-height: 100%;
-   margin-bottom: -80px;
-   padding-bottom: 80px;
+ 
+   /* sticky footer */
+   box-sizing: border-box;
+   margin-bottom: -100px;
+   padding-bottom: 100px;
  }
  
  
  /**
   * Footer CSS
   */
- 
  footer {
    box-sizing: border-box;
-   height: 80px;
+   height: 100px;
    background-color: #eee;
    border-top: 1px solid #e0e0e0;
-   padding-top: 15px;
+   padding-top: 35px;
  }
- 
