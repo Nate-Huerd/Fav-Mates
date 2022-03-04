@@ -4,8 +4,7 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 
-// commented out until it exists
-// const helpers = require('./utils/helpers');
+const helpers = require('./utils/helpers');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -32,8 +31,7 @@ const sess = {
 app.use(session(sess));
 
 // set up handlebars engine
-// helpers commented out because it doesn't exist yet
-const hbs = exphbs.create({ /* helpers */ });
+const hbs = exphbs.create({ helpers });
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
@@ -45,6 +43,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 // all the routes server will use
 app.use(require('./controllers'));
 
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => console.log(`Listening on ${PORT}`))
 });
