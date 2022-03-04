@@ -14,6 +14,17 @@ Menu.init({
         type: DataTypes.STRING,
         allowNull: false,
     },
+    price: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+    },
+    restaurant_id: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'Restaurant'
+            key: 'id'
+        }
+    }
 },
     {
         sequelize,

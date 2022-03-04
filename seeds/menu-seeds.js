@@ -11,6 +11,8 @@ const Menu = [
         "Veg Lemon Coriander Soup"
       ],
       "price": [90, 100, 80, 100, 80, 100, 130]
+      // reference restaurantID. This is so that we don't have a middle table
+      "restaurant_id": 1
     },
     {
       "name": "NON VEG SOUP",
