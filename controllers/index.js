@@ -6,12 +6,12 @@ const homeRoutes = require('../controllers/home-routes');
 
 // router.use('/dashboard', dashboardRoutes); //don't need these yet
 router.use('/', homeRoutes);
+console.log('index.js hello!')
 // router.use('/api', apiRoutes); //don't need these yet
 router.use((req, res) => {
   res.send("<h1>Work in Progress (Wrong route :c )</h1>")
 });
 
-router.use('/', homeRoutes);
 
 
 module.exports = router;
