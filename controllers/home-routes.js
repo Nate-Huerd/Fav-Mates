@@ -15,6 +15,11 @@ router.get('/sign-up', (req, res) => {
   res.render('sign-up');
 });
 
+router.get('/about-us', (req, res) => {
+  // if user is logged in redirect to homepage
+  res.render('about-us');
+});
+
 router.get('/', (req, res) => {
   console.log('========== Home Page Route ============');
   res.render('homepage')  
