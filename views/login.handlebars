@@ -5,9 +5,10 @@
   border-radius: 10px;
   margin-top: 5em;
   width: 23em;
-  height: 30em;
+  height: 32em;
   padding-top: .2em;
   padding-left: .2em;
+  margin-bottom: 8em;
 }
 
 .login-button{
@@ -45,18 +46,19 @@
   font-size: .75em;
   margin-bottom: -.06em;
   margin-right: 13em;
+  font-style: italic;
 }
 
 .email_text{
   font-size: .75em;
   margin-bottom: -.06em;
   margin-right: 15em;
+  font-style: italic;
 }
 
 .login-button-style{
   margin-top: 3em;
   margin-bottom: 3em;
-  width: 3em;
 }
 
 .login-fonts-signup{
@@ -67,7 +69,21 @@
 }
 
 .body_color{
-background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(40, 122, 245));
+background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(40, 122, 245));
+margin-bottom: -1.7em;
+}
+
+.sign-up-text{
+  font-size: x-small;
+}
+
+.mui-btn.mui--is-disabled, .mui-btn:disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: .6;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: 15em;
 }
 </style>
 <body class="body_color">
@@ -87,9 +103,9 @@ background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(40, 122,
       <input type="password" id="password-login" class="password-login-div"  placeholder="Enter your Password here" />
     </div>
     <div class = "login-button-style">
-      <button class="mui-btn mui-btn--primary" disabled type="submit">login</button>
+      <button class="mui-btn mui-btn--large mui-btn--primary mui-btn--raised" disabled type="submit">login</button>
     </div> 
-    <p>Or Sign Up Using</p>
+    <p class="sign-up-text">Or Sign Up Using</p>
     <a class="login-fonts-signup" href="/sign-up">Sign-Up</a>
   </form>
 </div>
