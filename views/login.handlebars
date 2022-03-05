@@ -1,28 +1,98 @@
-<form class='login-form'>
-  <div>
-    <label for='username-login'>email:</label>
-    <input type='text' id='username-login' />
-  </div>
-  <div>
-    <label for='password-login'>password:</label>
-    <input type='text' id='password-login' />
-  </div>
-  <div>
-    <button type='submit'>login</button>
-  </div>
-</form>
 
-<form class='signup-form'>
-  <div>
-    <label for='username-signup'>username:</label>
-    <input type='text' id='username-signup' />
-  </div>
-  <div>
-    <label for='password-signup'>password:</label>
-    <input type='text' id='password-signup' />
-  </div>
-  <div>
-    <button type='submit'>signup</button>
-  </div>
-</form>
-<script src='/javascript/login.js'></script>
+<style>
+.login-form{
+  background-color: white; 
+  border-radius: 10px;
+  margin-top: 5em;
+  width: 23em;
+  height: 30em;
+  padding-top: .2em;
+  padding-left: .2em;
+}
+
+.login-button{
+  background-color: #A6A6A6;
+}
+
+.login-header{
+  font-size: 2em;
+  color: black;
+  width: fit-content;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 1em;}
+
+.login-fonts{
+  font-size: 1em;
+  height: fit-content;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.email-login-div{
+  margin-bottom: 2em;
+  padding-top: 1em;
+  border-top: white;
+  border-right: white;
+  border-left: white;
+}
+
+.password-login-div{
+  padding-top: 1em;
+  border-top: white;
+  border-right: white;
+  border-left: white;
+}
+
+.password_text{
+  font-size: .75em;
+  margin-bottom: -.06em;
+  margin-right: 13em;
+}
+
+.email_text{
+  font-size: .75em;
+  margin-bottom: -.06em;
+  margin-right: 15em;
+}
+
+.login-buttom-style{
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.login-fonts-signup{
+  font-size: 1em;
+  height: fit-content;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin-top:3em;
+}
+
+.body_color{
+background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(40, 122, 245));
+}
+</style>
+<body class="body_color">
+<div class="mui-container"align="center">
+  <form class="login-form">
+    <h1 class="login-header">
+      Login
+    </h1>
+    <div class="login-fonts">
+      <label for="email-login"></label>
+      <p class="email_text">Email</p>
+      <input type="text" id="email-login" class="email-login-div" placeholder="Enter your Email here" />
+    </div>
+    <div class="login-fonts">
+      <label for="password-login"></label>
+      <p class="password_text">Password</p>
+      <input type="password" id="password-login" class="password-login-div"  placeholder="Enter your Password here" />
+    </div>
+    <div class = "login-buttom-style">
+      <button class="mui-btn mui-btn--primary" disabled type="submit">login</button>
+    </div> 
+    <p>Or Sign Up Using</p>
+    <a class="login-fonts-signup" href="/sign-up">Sign-Up</a>
+  </form>
+</div>
+</body>
+
+<script src="/javascript/login.js"></script>
+<script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
