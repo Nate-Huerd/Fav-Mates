@@ -7,10 +7,13 @@ const sequelize = require('../config/connection');
 
 router.get('/login', (req, res) => {
   // if user is logged in redirect to homepage
-  console.log("hello!");
   res.render('login');
 });
 
+router.get('/sign-up', (req, res) => {
+  // if user is logged in redirect to homepage
+  res.render('sign-up');
+});
 
 router.get('/', (req, res) => {
   console.log('========== Home Page Route ============');
