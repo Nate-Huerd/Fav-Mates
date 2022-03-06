@@ -5,13 +5,21 @@ const sequelize = require('../config/connection')
 
 // login page
 router.get('/login', (req, res) => {
-  // if user is logged in redirect to homepage
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+
   res.render('login');
 });
 
 
 router.get('/sign-up', (req, res) => {
-  // if user is logged in redirect to homepage
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+
   res.render('sign-up');
 });
 
@@ -47,7 +55,9 @@ router.get('/restaurant/:id', (req, res) => {
 
 router.get('/', (req, res) => {
   console.log('========== Home Page Route ============');
-  res.render('homepage')  
+  res.render('homepage', {
+    loggedIn: req.session.loggedIn
+  }); 
 })
 
 module.exports = router;
