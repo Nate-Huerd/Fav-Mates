@@ -1,18 +1,12 @@
 const router = require('express').Router();
-const { User, Restaurant, Menu } = require('../models');
 
-router.get('/', (req, res) => {
-  console.log('========== Home Page Route ============');
-  res.render('homepage')  
-})
+const { User } = require('../models');
+const sequelize = require('../config/connection')
 
 // login page
 router.get('/login', (req, res) => {
   // if user is logged in redirect to homepage
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
-  }
+  console.log("hello!");
   res.render('login');
 });
 
@@ -40,5 +34,10 @@ router.get('/restaurant/:id', (req, res) => {
     res.status(500).json(err);
   });
 });
+
+router.get('/', (req, res) => {
+  console.log('========== Home Page Route ============');
+  res.render('homepage')  
+})
 
 module.exports = router;

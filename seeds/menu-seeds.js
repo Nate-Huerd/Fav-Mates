@@ -10,7 +10,7 @@ const Menu = [
         "Veg Noodles Soup",
         "Veg Lemon Coriander Soup"
       ],
-      "price": [90, 100, 80, 100, 80, 100, 130]
+      "price": [90, 100, 80, 100, 80, 100, 130],
       // reference restaurantID. This is so that we don't have a middle table
       "restaurant_id": 1
     },
@@ -29,7 +29,8 @@ const Menu = [
         "Chicken Lemon Coriander Soup",
         "Mutton Soup(Only Monday)"
       ],
-      "price": [120, 110, 120, 100, 120, 130, 110, 120, 130, 140, 130]
+      "price": [120, 110, 120, 100, 120, 130, 110, 120, 130, 140, 130],
+      "restaurant_id": 2
     },
     {
       "name": "VEG STARTERS",
@@ -45,7 +46,8 @@ const Menu = [
         "Veg Hot Pan",
         "Veg Hara Bhara Kabab"
       ],
-      "price": [150, 180, 130, 180, 140, 150, 190, 190, 220, 200]
+      "price": [150, 180, 130, 180, 140, 150, 190, 190, 220, 200],
+      "restaurant_id": 2
     },
     {
       "name": "NON VEG STARTERS",
@@ -82,7 +84,8 @@ const Menu = [
         180,
         180,
         240
-      ]
+      ],
+      "restaurant_id": 3
     },
     {
       "name": "TANDOOR FARMAISH",
@@ -131,7 +134,8 @@ const Menu = [
         220,
         590,
         250
-      ]
+      ],
+      "restaurant_id": 4
     },
     {
       "name": "THE VEGGIE BASH",
@@ -172,7 +176,8 @@ const Menu = [
         100,
         110,
         120
-      ]
+      ],
+      "restaurant_id": 5
     },
     {
       "name": "THE CHICKEN BASH",
@@ -223,7 +228,8 @@ const Menu = [
         260,
         230,
         150
-      ]
+      ],
+      "restaurant_id": 6
     },
     {
       "name": "THE MUTTON BASH",
@@ -242,7 +248,8 @@ const Menu = [
         "Mutton Patiala",
         "Rogan Gosht"
       ],
-      "price": [260, 320, 610, 270, 260, 270, 280, 280, 300, 300, 280, 320, 260]
+      "price": [260, 320, 610, 270, 260, 270, 280, 280, 300, 300, 280, 320, 260],
+      "restaurant_id": 7
     },
     {
       "name": "THE MALVANI TADKA",
@@ -277,7 +284,8 @@ const Menu = [
         260,
         260,
         290
-      ]
+      ],
+      "restaurant_id": 8
     },
     {
       "name": "UNIQUE DESSERT",
@@ -291,7 +299,8 @@ const Menu = [
         "Ice Cream(1scp)",
         "Ice Cream(2scp)"
       ],
-      "price": [145, 90, 120, 130, 180, 300, 50, 80]
+      "price": [145, 90, 120, 130, 180, 300, 50, 80],
+      "restaurant_id": 9
     },
     {
       "name": "BASMATI KHAZANA",
@@ -308,7 +317,8 @@ const Menu = [
         "Jeera Rice",
         "Steam Rice"
       ],
-      "price": [100, 120, 180, 200, 200, 220, 140, 220, 170, 90, 80]
+      "price": [100, 120, 180, 200, 200, 220, 140, 220, 170, 90, 80],
+      "restaurant_id": 10
     },
     {
       "name": "CHINESE VEG RICE",
@@ -323,7 +333,8 @@ const Menu = [
         "Veg Bamboo Fried Rice",
         "Veg Hot Garlic Fried Rice"
       ],
-      "price": [140, 160, 180, 190, 180, 170, 160, 190, 160]
+      "price": [140, 160, 180, 190, 180, 170, 160, 190, 160],
+      "restaurant_id": 11
     },
     {
       "name": "CHINESE NON VEG RICE",
@@ -358,7 +369,8 @@ const Menu = [
         230,
         160,
         180
-      ]
+      ],
+      "restaurant_id": 12
     },
     {
       "name": "CHINESE VEG NOODLES",
@@ -370,7 +382,8 @@ const Menu = [
         "Veg Tripple Noodles",
         "Veg 8 to 9 Noodles"
       ],
-      "price": [150, 160, 180, 180, 190, 160]
+      "price": [150, 160, 180, 180, 190, 160],
+      "restaurant_id": 13
     },
     {
       "name": "CHINESE NON VEG NOODLES",
@@ -383,7 +396,8 @@ const Menu = [
         "Chicken 8 to 9 Noodles",
         "Prawns Noodles"
       ],
-      "price": [170, 180, 200, 200, 210, 230, 180]
+      "price": [170, 180, 200, 200, 210, 230, 180],
+      "restaurant_id": 14
     },
     {
       "name": "TANDOORI ROTI",
@@ -397,7 +411,8 @@ const Menu = [
         "Methi Paratha",
         "Pudina Paratha"
       ],
-      "price": [15, 25, 35, 35, 45, 60, 60, 60]
+      "price": [15, 25, 35, 35, 45, 60, 60, 60],
+      "restaurant_id": 15
     },
     {
       "name": "GARLIC BREAD",
@@ -416,7 +431,8 @@ const Menu = [
         "Pasta Baked mac",
         "Monsoon Pink Pasta"
       ],
-      "price": [125, 160, 160, 170, 180, 180, 190, 200]
+      "price": [125, 160, 160, 170, 180, 180, 190, 200],
+      "restaurant_id": 16
     },
     {
       "name": "ITALIAN PASTA(NON VEG)",
@@ -430,7 +446,8 @@ const Menu = [
         "Pasta Baked mac",
         "Monsoon Pink Pasta"
       ],
-      "price": [145, 180, 180, 190, 200, 200, 210, 220]
+      "price": [145, 180, 180, 190, 200, 200, 210, 220],
+      "restaurant_id": 17
     },
     {
       "name": "ITALIAN PIZZS(VEG)",
@@ -443,7 +460,8 @@ const Menu = [
         "Pasta Lavena",
         "Pasta Noodles"
       ],
-      "price": [120, 150, 150, 170, 180, 190, 210]
+      "price": [120, 150, 150, 170, 180, 190, 210],
+      "restaurant_id": 18
     },
     {
       "name": "ITALIAN PIZZS(NON VEG)",
@@ -456,7 +474,8 @@ const Menu = [
         "Pasta Lavena",
         "Pasta Noodles"
       ],
-      "price": [140, 170, 170, 190, 200, 210, 230]
+      "price": [140, 170, 170, 190, 200, 210, 230],
+      "restaurant_id": 19
     },
     {
       "name": "MOJITO",
@@ -469,11 +488,13 @@ const Menu = [
         "Green Apple",
         "Water Melon"
       ],
-      "price": [95, 95, 95, 95, 95, 95, 95]
+      "price": [95, 95, 95, 95, 95, 95, 95],
+      "restaurant_id": 20
     }
   ];
 
-  module.exports = Menu;
+  const seedMenu = () => Menu.map(({ key, value}) => ({ [key]: value }));
+  module.exports = seedMenu;
 
   /*
   const Menu = require('../seeds/menu-seeds');
