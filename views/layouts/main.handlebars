@@ -38,7 +38,11 @@
               </button>
               <ul class="mui-dropdown__menu">
                 <li><a href="/">Home</a></li>
+                {{#if loggedIn}}
+                <li><a href="/" id="logout">Logout</a></li>
+                {{else}}
                 <li><a href="/login">Login</a></li>
+                {{/if}}
                 <li><a href="/about-us">About Us</a></li>
               </ul>
             </div>
@@ -57,5 +61,8 @@
     <script>
       new WOW().init();
     </script>
+      {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+      {{/if}}
   </body>
 </html>

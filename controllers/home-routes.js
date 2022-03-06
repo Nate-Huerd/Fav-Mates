@@ -18,6 +18,7 @@ router.get('/sign-up', (req, res) => {
 router.get('/about-us', (req, res) => {
   // if user is logged in redirect to homepage
   res.render('about-us');
+});
 
 // page for single restaurant
 router.get('/restaurant/:id', (req, res) => {
