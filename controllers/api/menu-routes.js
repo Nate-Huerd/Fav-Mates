@@ -1,10 +1,16 @@
 const router = require('express').Router();
-const { Menu } = require('../../models');
+const { Menu, Restaurant } = require('../../models');
 
 // get all menu items
 router.get('/', (req, res) => {
   Menu.findAll({
-    attributes: ['id', 'name', 'price', 'restaurant_id']
+    attributes: ['id', 'name', 'price', 'restaurant_id'],
+    include: [
+      {
+        model: Restaurant,
+        attributes: ['name']
+      }
+    ]
   })
   .then(dbMenuData => res.json(dbMenuData))
   .catch(err => {
