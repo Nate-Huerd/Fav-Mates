@@ -1,17 +1,15 @@
 const router = require('express').Router();
 
-// const apiRoutes = require('./api/'); //don't need these yet
+const apiRoutes = require('./api');
 const homeRoutes = require('../controllers/home-routes');
-// const dashboardRoutes = require('./dashboard-routes.js'); //don't need these yet
+const shoppingCartRoutes = require('../controllers/shopping-cart-routes');
 
-// router.use('/dashboard', dashboardRoutes); //don't need these yet
 router.use('/', homeRoutes);
-console.log('index.js hello!')
-// router.use('/api', apiRoutes); //don't need these yet
+router.use('/api', apiRoutes); 
+router.use('/shopping-cart', shoppingCartRoutes);
+
 router.use((req, res) => {
   res.send("<h1>Work in Progress (Wrong route :c )</h1>")
 });
-
-
 
 module.exports = router;
