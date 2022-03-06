@@ -15,8 +15,8 @@ async function login(e) {
       headers: { 'Content-Type': 'application/json'}
     });
 
-    // send user to their dashboard after successful log in
-    if (response.ok) document.location.replace('/dashboard');
+    // send user back to homepage when logged in
+    if (response.ok) document.location.replace('/');
     else console.log(response.statusText);
   }
 }
@@ -38,8 +38,8 @@ async function signup(e) {
       headers: { 'Content-Type': 'application/json'}
     });
 
-    // redirect to dashboard if signup ok
-    if (response.ok) document.location.replace('/dashboard');
+    // send user back to homepage if signup ok
+    if (response.ok) document.location.replace('/');
     else console.log(response.statusText);
   }
 }

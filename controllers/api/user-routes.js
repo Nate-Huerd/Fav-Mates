@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const sequelize = require('../../config/connection');
+const { User, Menu } = require('../../models');
 
 // get all users
 router.get('/', (req,res) => {
@@ -103,6 +104,7 @@ router.post('/logout', (req, res) => {
   }
 });
 
+// delete a user
 router.delete('/:id', (req, res) => {
   User.destroy({
     where: {
@@ -120,6 +122,26 @@ router.delete('/:id', (req, res) => {
     console.log(err);
     res.status(500).json(err);
   });
+});
+
+// add items to user's cart
+router.post('/order', (req, res) => {
+  // console.log(req.session.cart);
+  Menu.findAll({
+    where: {
+      id: req.body.orderArray
+    }
+  }).then(dbMenuData => {
+    let cart =dbMenuData.map(item => item.get({ plain: true}));    
+    // console.log(cart);
+
+    req.session.cart = cart;
+    console.log(req.session);
+    res.json(req.session.cart)
+  }).catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  })
 });
 
 module.exports = router;
