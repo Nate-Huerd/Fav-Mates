@@ -21,7 +21,7 @@ Menu.init({
     restaurant_id: {
         type: DataTypes.INTEGER,
         references: {
-            model: 'Restaurant',
+            model: 'restaurant',
             key: 'id'
         }
     }
