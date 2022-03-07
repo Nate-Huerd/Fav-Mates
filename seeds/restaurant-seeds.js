@@ -65,12 +65,6 @@ const restaurantData = [
   {
     name: `Croissant Bang Bang`
   },
-  {
-    name: `Lego Land Tacos`
-  },
-  {
-    name: `The Dude`
-  }
 ];
 
 const seedRestaurants = () => Restaurant.bulkCreate(restaurantData);
