@@ -10,7 +10,8 @@ module.exports = {
   // item.price needs to be a number for this to work
   totalItems: cartArray => {
     let priceArray = cartArray.map(item => item.price);
-    return priceArray.reduce((a, b) => a+b);
+    let total = priceArray.reduce((a, b) => a+b);
+    return total;
   },
 
   formatCurrency: amount => {
@@ -19,9 +20,9 @@ module.exports = {
     let dollars;
     if (str.length-2 > 0) {
     dollars = str.slice(0, str.length-2);
-      return `$${dollars}.${cents}`;
+      return `${dollars}.${cents}`;
     } else {
-      return `$0.${cents}`
+      return `0.${cents}`
     }
   },
 

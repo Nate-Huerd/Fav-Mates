@@ -134,12 +134,17 @@ router.post('/order', (req, res) => {
     // console.log(cart);
 
     req.session.cart = cart;
-    console.log(req.session);
     res.json(req.session.cart)
   }).catch(err => {
     console.log(err);
     res.status(500).json(err);
   })
+});
+
+// add grand total to session
+router.post('/addTotal', (req, res) => {
+  req.session.grandTotal = req.body.grandTotal;
+  res.json(req.session.grandTotal);
 });
 
 module.exports = router;

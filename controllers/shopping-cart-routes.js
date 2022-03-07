@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
 
 router.get('/complete', (req, res) => {
   let date = new Date();
-  res.render('order-complete', {date});
+  res.render('order-complete', { date: date, grandTotal: req.session.grandTotal });
 })
 
 module.exports = router;
