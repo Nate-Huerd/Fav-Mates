@@ -25,12 +25,16 @@ router.get('/sign-up', (req, res) => {
 
 router.get('/about-us', (req, res) => {
   // if user is logged in redirect to homepage
-  res.render('about-us');
+  res.render('about-us', {loggedIn: req.session.loggedIn});
 });
 
 
 // page for single restaurant
 router.get('/restaurants/:id', (req, res) => {
+  if (!req.session.loggedIn) {
+    res.redirect('/login');
+    return;
+  }
   Restaurant.findOne({
     where: {
       id: req.params.id
@@ -56,6 +60,7 @@ router.get('/restaurants/:id', (req, res) => {
 
 router.get('/', (req, res) => {
   console.log('========== Home Page Route ============');
+  console.log(req.session);
   res.render('homepage', {
     loggedIn: req.session.loggedIn
   }); 

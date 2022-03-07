@@ -36,23 +36,6 @@ const menuItems = [
     restaurant_id: 2,
   },
   {
-    name: 'VEG STARTERS',
-    items: [
-      'Veg Crispy',
-      'Veg Spring Roll*',
-      'Veg Lollipop',
-      'Veg Paneer Chilli',
-      'Veg Manchurian',
-      'Veg Hot Garlic',
-      'Paneer Satay*',
-      'Paneer Schezwan',
-      'Veg Hot Pan',
-      'Veg Hara Bhara Kabab',
-    ],
-    price: [150, 180, 130, 180, 140, 150, 190, 190, 220, 200],
-    restaurant_id: 2,
-  },
-  {
     name: 'NON VEG STARTERS',
     items: [
       'Chicken Chilli',
@@ -395,6 +378,23 @@ const menuItems = [
     price: [95, 95, 95, 95, 95, 95, 95],
     restaurant_id: 20,
   },
+  {
+    name: 'VEG STARTERS',
+    items: [
+      'Veg Crispy',
+      'Veg Spring Roll*',
+      'Veg Lollipop',
+      'Veg Paneer Chilli',
+      'Veg Manchurian',
+      'Veg Hot Garlic',
+      'Paneer Satay*',
+      'Paneer Schezwan',
+      'Veg Hot Pan',
+      'Veg Hara Bhara Kabab',
+    ],
+    price: [150, 180, 130, 180, 140, 150, 190, 190, 220, 200],
+    restaurant_id: 21,
+  },
 ];
 
 function itemArrayFromMenuObject(menuObj) {
@@ -405,7 +405,7 @@ function itemArrayFromMenuObject(menuObj) {
   for (let i = 0; i < nameArray.length; i++) {
     let newMenuItem = {
       name: nameArray[i],
-      price: priceArray[i],
+      price: priceArray[i] *2.5,
       restaurant_id,
     };
     itemArray.push(newMenuItem);

@@ -3,6 +3,9 @@ const sequelize = require('../config/connection');
 const { Restaurant, Menu } = require('../models/index');
 
 router.get('/', async (req, res) => {
+  if (!req.session.loggedIn) {
+    res.redirect('/login');
+  }
   Restaurant.findAll({
     attributes: ['id', 'name'],
     include: [

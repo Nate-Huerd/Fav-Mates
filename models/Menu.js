@@ -15,7 +15,7 @@ Menu.init({
         allowNull: false,
     },
     price: {
-        type: DataTypes.DECIMAL(10,2),
+        type: DataTypes.INTEGER,
         allowNull: false,
     },
     restaurant_id: {
