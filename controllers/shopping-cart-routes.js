@@ -18,10 +18,13 @@ router.get('/complete', (req, res) => {
     return;
   }
   
+  if (!req.session.grandTotal) {
+    res.redirect('/');
+  }
   let date = new Date();
-  res.render('order-complete', { date: date, grandTotal: req.session.grandTotal });
-  // req.session.cart = [];
-  // req.session.grandTotal = 0;
+  res.render('order-complete', { date: date, grandTotal: req.session.grandTotal, loggedIn: req.session.loggedIn });
+  req.session.cart = [];
+  req.session.grandTotal = 0;
 })
 
 module.exports = router;

@@ -4,13 +4,24 @@ module.exports = {
   },
 
   checkCount: cartArray => {
-    return cartArray.length;
+    let total = 0;
+    for (let i = 0; i < cartArray.length; i++) {
+      let quantity = cartArray[i].quantity;
+      total += quantity;
+    }
+    return total;
   },
 
   // item.price needs to be a number for this to work
   totalItems: cartArray => {
     let priceArray = cartArray.map(item => item.price);
-    let total = priceArray.reduce((a, b) => a+b);
+    let quantityArray = cartArray.map(item => item.quantity);
+    let multipliedArray = [];
+    for (let i = 0; i < priceArray.length; i++) {
+      let amount = priceArray[i] * quantityArray[i];
+      multipliedArray.push(amount);
+    }
+    let total = multipliedArray.reduce((a, b) => a+b);
     return total;
   },
 

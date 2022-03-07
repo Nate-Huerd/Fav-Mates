@@ -18,8 +18,36 @@ router.get('/', async (req, res) => {
   })
   .then(dbRestaurantData => {
     const restaurants = dbRestaurantData.map(restaurant => restaurant.get({ plain: true }));
-    res.render('restaurant-full-list', { restaurants });
+    res.render('restaurant-full-list', { restaurants, loggedIn: req.session.loggedIn });
   })
+});
+
+// page for single restaurant
+router.get('/:id', (req, res) => {
+  if (!req.session.loggedIn) {
+    res.redirect('/login');
+    return;
+  }
+  Restaurant.findOne({
+    where: {
+      id: req.params.id
+    },
+    attributes: ['id', 'name'],
+    include: [
+      {
+        model: Menu,
+        attributes: ['id', 'name', 'price']
+      }
+    ]
+  })
+  .then(dbRestaurantData => {
+    let restaurant = dbRestaurantData.get({ plain: true });
+    res.render('single-restaurant', {restaurant, loggedIn: req.session.loggedIn });
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 module.exports = router;

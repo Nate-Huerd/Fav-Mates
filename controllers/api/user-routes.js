@@ -124,14 +124,18 @@ router.delete('/:id', (req, res) => {
 
 // add items to user's cart
 router.post('/order', (req, res) => {
-  // console.log(req.session.cart);
+  let itemIds = req.body.orderArray.map(obj => obj.itemId);
+  let totals = req.body.orderArray.map(obj => obj.itemAmount);
   Menu.findAll({
     where: {
-      id: req.body.orderArray
+      id: itemIds
     }
   }).then(dbMenuData => {
-    let cart =dbMenuData.map(item => item.get({ plain: true}));    
-    // console.log(cart);
+    let cart =dbMenuData.map(item => item.get({ plain: true}));
+    for (let i = 0; i < cart.length; i++) {
+      let quantity = totals[i];
+      cart[i].quantity = quantity;
+    }
 
     req.session.cart = cart;
     res.json(req.session.cart)
