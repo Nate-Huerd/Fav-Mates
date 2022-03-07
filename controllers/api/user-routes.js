@@ -61,7 +61,6 @@ router.post('/login', (req, res) => {
       req.session.username = dbUserData.name;
       req.session.loggedIn = true;
       req.session.cart = [];
-
       res.json({
         user: dbUserData,
           message: 'You are logged in'
@@ -82,7 +81,6 @@ router.post('/', (req, res) => {
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
       req.session.cart = [];
-
       res.json(dbUserData);
     })
   })
