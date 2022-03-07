@@ -30,7 +30,7 @@ router.get('/about-us', (req, res) => {
 
 
 // page for single restaurant
-router.get('/restaurant/:id', (req, res) => {
+router.get('/restaurants/:id', (req, res) => {
   Restaurant.findOne({
     where: {
       id: req.params.id
