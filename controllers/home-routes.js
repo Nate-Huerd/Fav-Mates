@@ -28,6 +28,7 @@ router.get('/about-us', (req, res) => {
   res.render('about-us');
 });
 
+
 // page for single restaurant
 router.get('/restaurant/:id', (req, res) => {
   Restaurant.findOne({
