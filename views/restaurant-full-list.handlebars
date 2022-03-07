@@ -1,8 +1,33 @@
-<ol class="restaurant-list">
-  <h2></h2>
-  {{#each restaurants as |restaurant|}}
-  <li>
-    {{> restaurant-preview restaurant}}
-  </li>
-  {{/each}}
-</ol>
+<style>
+.header_title{
+  font-size: 2em;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.footer{
+  margin-top: 20em;
+}
+.body_color{
+background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(40, 122, 245));
+margin-bottom: -1.7em;
+}
+.restaurant-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  list-style-type: none;
+}
+.title{
+  position: relative;
+} 
+  </style>
+<body class="body_color">
+<h2 class="title">Restaurants Near You</h2>
+    <ul class="restaurant-list">
+      {{#each restaurants as |restaurant|}}
+      <li>
+        {{> restaurant-preview}}
+      </li>
+      {{/each}}
+    </ul>
+  </body>
