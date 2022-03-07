@@ -7,7 +7,7 @@
   {{>menu-items-preview cart}}
   {{!-- totalItems is a helper function that will --}}
   {{!-- add up the price value of each item in the cart --}}
-  <p>Your total is {{totalItems cart}}</p>
+  <p>Your total is {{formatCurrency (totalItems cart) }}</p>
   <button class="checkout-btn">Checkout</button>
   {{else}}
   <p>You have no items in your cart</p>

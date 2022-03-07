@@ -1,1 +1,0 @@
-// click listener to add item to cart

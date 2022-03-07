@@ -8,4 +8,9 @@ router.get('/', async (req, res) => {
    res.render('shopping-cart', req.session);
 });
 
+router.get('/complete', (req, res) => {
+  let date = new Date();
+  res.render('order-complete', {date});
+})
+
 module.exports = router;
