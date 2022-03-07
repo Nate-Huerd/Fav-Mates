@@ -6,7 +6,7 @@ module.exports = {
   checkCount: cartArray => {
     let total = 0;
     for (let i = 0; i < cartArray.length; i++) {
-      let quantity = cartArray[i].quantity;
+      let quantity = parseInt(cartArray[i].quantity);
       total += quantity;
     }
     return total;
