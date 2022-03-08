@@ -5,6 +5,7 @@ const { User, Restaurant, Menu } = require('../models/index');
 // eventually include withAuth
 
 router.get('/', async (req, res) => {
+  console.log(req.session);
   if (!req.session.loggedIn) {
     res.redirect('/login');
     return;

@@ -58,13 +58,14 @@ router.post('/login', (req, res) => {
     req.session.save(() => {
       // create session variables
       req.session.user_id = dbUserData.id;
-      req.session.username = dbUserData.name;
+      req.session.username = dbUserData.username;
       req.session.loggedIn = true;
       req.session.cart = [];
       res.json({
         user: dbUserData,
           message: 'You are logged in'
       });
+      console.log(req.session.username)
     })
   })
 })
@@ -83,6 +84,7 @@ router.post('/', (req, res) => {
       req.session.cart = [];
       res.json(dbUserData);
     })
+    console.log(req.session.username);
   })
   .catch(err => {
     console.log(err);
