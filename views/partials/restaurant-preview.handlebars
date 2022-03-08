@@ -1,3 +1,18 @@
+<style>
+.restaurant{
+  margin: 1vw;
+  background-color: aliceblue;
+  padding: 1vw;
+  border: solid 1mm #CCDFFC;
+  border-radius: 25px;
+  flex-wrap: nowrap;
+  text-align: center;
+  width: 20em;
+  }
+.restaurant-name{
+  font-size: 2em;
+}  
+</style>
 <article class='restaurant'>
   <a href="/restaurants/{{id}}"><h2 class="restaurant-name"> {{name}}</h2></a> 
     {{>menu-items-preview menus}}
