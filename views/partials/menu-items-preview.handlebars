@@ -1,8 +1,13 @@
+<style>
+.price{
+  margin-left: .5vw;  
+  }
+</style>
 <div class="popular-items">
   {{#each this}}
   <section class="individual-item">
     <p>{{name}}</p>
-    <p>{{price}}</p>
+    <p class="price">{{price}}₹</p>
   </section>
   {{/each}}
 </div>
