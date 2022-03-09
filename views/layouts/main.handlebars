@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <style>
+    .header_title{
+      font-size: 2em;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .footer{
+      margin-top: 20em;
+    }
+    .body_color{
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(40, 122, 245));
+    margin-bottom: -1.7em;
+    }
+  </style>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FAV Mates!</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.muicss.com/mui-latest/extra/mui-colors.min.css">
+    <link rel="stylesheet" href="../../public/stylesheets/style.css">
+    <script src="//cdn.muicss.com/mui-latest/extra/mui-combined.min.js"></script>
+  </head>
+  <body class="body_color">
+    <header>
+      <div class="mui-appbar">
+        <table width="100%">
+          <tr style="vertical-align:middle;">
+            <td class="header_title"mui--appbar-height align="left"> Fav Mates</td>
+            <td class=""mui--appbar-height align="right">
+              <div class="mui-dropdown">
+              <button class="mui-btn mui-btn--primary" data-mui-toggle="dropdown">
+                Account
+                <span class="mui-caret"></span>
+              </button>
+              <ul class="mui-dropdown__menu">
+                <li><a href="/">Home</a></li>
+                {{#if loggedIn}}
+                <li><a href="/restaurants">Restaurants</a></li>
+                <li><a href="/" id="logout">Logout</a></li>
+                <li><a href="/shopping-cart">Cart</a></li>
+                {{else}}
+                <li><a href="/login">Login</a></li>
+                {{/if}}
+                <li><a href="/about-us">About Us</a></li>
+              </ul>
+            </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </header>
+    <main>
+    {{{ body }}}
+    </main>
+    <footer class="footer">
+      <div class="mui-container mui--text-center mui--text-bottom">
+        Made with ♥ by <a href="doordash.com"> The Fav Mates Team</a>
+      </div>
+    </footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+      {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+      {{/if}}
+  </body>
+</html>

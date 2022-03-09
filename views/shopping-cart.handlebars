@@ -1,0 +1,39 @@
+{{!-- rendered with session object? will have username and cart info --}}
+<section id="checkout-section">
+  <h2>{{username}}'s Cart</h2>
+  {{!-- checkCart is a helper function that returns true if cartArray is not empty --}}
+  {{#if cart}}
+  <p>You have {{checkCount cart}} items in your cart.</p>
+  {{>menu-items-preview cart}}
+  {{!-- totalItems is a helper function that will --}}
+  {{!-- add up the price value of each item in the cart --}}
+  <p>Your order comes to $<span id="sub-total">{{formatCurrency (totalItems cart) }}</span></p>
+
+  <form id="order-form">
+  <p>Please tip your driver!</p>
+    <div>
+      <input type="radio" id="twenty-percent" name="tip" value="20">
+      <label for="twenty-percent">20%</label>
+    </div>
+
+    <div>
+      <input type="radio" id="twenty-five-percent" name="tip" value="25">
+      <label for="twenty-percent">25%</label>
+    </div>
+
+    <div>
+      <input type="radio" id="thirty-percent" name="tip" value="30" checked>
+      <label for="thiry-percent">30%</label>
+    </div>
+    <p>Delivery Fee: $<span id="delivery-fee">4.50</span></p>
+
+    <button id="confirm-order">Continue</button>
+  </form>
+
+
+<script src="/javascript/checkout.js"></script>
+  {{else}}
+  <p>You have no items in your cart</p>
+  <a href="/restaurants"><button>Start Order</button></a>
+  {{/if}}
+</section>
