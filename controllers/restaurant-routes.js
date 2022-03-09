@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
   })
   .then(dbRestaurantData => {
     const restaurants = dbRestaurantData.map(restaurant => restaurant.get({ plain: true }));
-    res.render('restaurant-full-list', { restaurants });
+    res.render('restaurant-full-list', { restaurants, loggedIn: req.session.loggedIn });
   })
 });
 

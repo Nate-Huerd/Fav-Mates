@@ -13,7 +13,6 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-
 router.get('/sign-up', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
@@ -27,7 +26,6 @@ router.get('/about-us', (req, res) => {
   // if user is logged in redirect to homepage
   res.render('about-us');
 });
-
 
 // page for single restaurant
 router.get('/restaurants/:id', (req, res) => {
@@ -46,7 +44,7 @@ router.get('/restaurants/:id', (req, res) => {
   .then(dbRestaurantData => {
     let restaurant = dbRestaurantData.get({ plain: true });
     console.log(restaurant);
-    res.render('single-restaurant', restaurant);
+    res.render('single-restaurant', restaurant, loggedIn: req.session.loggedIn);
   })
   .catch(err => {
     console.log(err);
