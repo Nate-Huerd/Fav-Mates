@@ -6,8 +6,12 @@
 <div class="popular-items">
   {{#each this}}
   <section class="individual-item">
-    <p>{{name}}</p>
-    <p class="price">{{price}}₹</p>
+    <p>
+      {{#if quantity}}
+      {{quantity}})
+      {{/if}}
+      {{name}}</p>
+    <p>$<span class="item-preview-price">{{formatCurrency price}}</span></p>
   </section>
   {{/each}}
 </div>

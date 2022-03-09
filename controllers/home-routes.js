@@ -25,37 +25,14 @@ router.get('/sign-up', (req, res) => {
 
 router.get('/about-us', (req, res) => {
   // if user is logged in redirect to homepage
-  res.render('about-us');
+  res.render('about-us', {loggedIn: req.session.loggedIn});
 });
 
 
-// page for single restaurant
-router.get('/restaurants/:id', (req, res) => {
-  Restaurant.findOne({
-    where: {
-      id: req.params.id
-    },
-    attributes: ['id', 'name'],
-    include: [
-      {
-        model: Menu,
-        attributes: ['id', 'name', 'price']
-      }
-    ]
-  })
-  .then(dbRestaurantData => {
-    let restaurant = dbRestaurantData.get({ plain: true });
-    console.log(restaurant);
-    res.render('single-restaurant', restaurant);
-  })
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  });
-});
+
 
 router.get('/', (req, res) => {
-  console.log('========== Home Page Route ============');
+  console.log(req.session);
   res.render('homepage', {
     loggedIn: req.session.loggedIn
   }); 

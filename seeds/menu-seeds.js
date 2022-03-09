@@ -378,7 +378,6 @@ const menuItems = [
     price: [95, 95, 95, 95, 95, 95, 95],
     restaurant_id: 20,
   },
-
   {
     name: 'VEG STARTERS',
     items: [
@@ -406,7 +405,7 @@ function itemArrayFromMenuObject(menuObj) {
   for (let i = 0; i < nameArray.length; i++) {
     let newMenuItem = {
       name: nameArray[i],
-      price: priceArray[i],
+      price: priceArray[i] *2.5,
       restaurant_id,
     };
     itemArray.push(newMenuItem);

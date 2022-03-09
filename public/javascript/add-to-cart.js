@@ -14,21 +14,42 @@ async function orderToSession() {
   });
 
   if (response.ok) {
-    document.location.replace('/shopping-cart')
+    setTimeout(() => {
+      document.location.replace('/shopping-cart')
+    },5000)
   } else {
     console.log(response.statusText);
   }
 }
 
 function addToCart(e) {
-  if (!clicked) {
-    let checkoutBtn = document.createElement('button');
-    checkoutBtn.textContent = 'Check Out';
-    document.querySelector('.menu-items').appendChild(checkoutBtn);
-    checkoutBtn.addEventListener('click', orderToSession);
+  if (e.target.innerText === 'Add to Cart') {
+
+    if (!clicked) {
+      let checkoutBtn = document.createElement('button');
+      checkoutBtn.textContent = 'Check Out';
+      document.querySelector('.menu-items').appendChild(checkoutBtn);
+      checkoutBtn.addEventListener('click', orderToSession);
+    }
+    clicked = 1;
+    let itemId = e.target.dataset.id;
+    let itemAmount = e.target.previousElementSibling.value;
+  
+    orderArray.push({
+      itemId,
+      itemAmount
+    });
+  
+    e.target.innerHTML = 'Remove';
+  } else if (e.target.innerText === 'Remove') {
+    let index = orderArray.map(e => e.itemId).indexOf(e.target.dataset.id)
+    console.log('The index of the item to remove is ' + index);
+    e.target.innerHTML = 'Add to Cart';
+    orderArray.splice(index, 1);
   }
-  clicked = 1;
-  orderArray.push(e.target.dataset.id);
+
+  // console.log(itemAmount);
+  // console.log(itemId);
   console.log(orderArray);
 }
 

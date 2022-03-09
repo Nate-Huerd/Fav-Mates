@@ -1,9 +1,15 @@
 <div class="menu-items">
   {{#each this}}
   <section class="single-item">
-    <p>{{name}} {{price}}"$"</p>
+    <p>{{name}}</p>
+    <p>$<span class="item-preview-price"></span>{{formatCurrency price}}</p>
+    <label for="{{name}}"></label>
+    <input type="number" class="amount" name="name"
+       min="1" max="10" default="1" value="1">
+
     <button class="add-to-cart" data-id="{{id}}">Add to Cart</button>
   </section>
   {{/each}}
 </div>
+
 <script src="/javascript/add-to-cart.js"></script>

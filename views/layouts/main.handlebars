@@ -38,14 +38,14 @@
               </button>
               <ul class="mui-dropdown__menu">
                 <li><a href="/">Home</a></li>
-                <li><a href="/restaurants">Restaurants</a></li>
                 {{#if loggedIn}}
+                <li><a href="/restaurants">Restaurants</a></li>
                 <li><a href="/" id="logout">Logout</a></li>
+                <li><a href="/shopping-cart">Cart</a></li>
                 {{else}}
                 <li><a href="/login">Login</a></li>
                 {{/if}}
                 <li><a href="/about-us">About Us</a></li>
-                <li><a href="/cart">Cart</a></li>
               </ul>
             </div>
             </td>
@@ -53,7 +53,9 @@
         </table>
       </div>
     </header>
+    <main>
     {{{ body }}}
+    </main>
     <footer class="footer">
       <div class="mui-container mui--text-center mui--text-bottom">
         Made with ♥ by <a href="doordash.com"> The Fav Mates Team</a>

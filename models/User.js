@@ -32,7 +32,7 @@ User.init(
     },
   },
   {
-    // hooks to has password
+    // hooks to hash password
     hooks: {
       async beforeCreate(newUserData) {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
