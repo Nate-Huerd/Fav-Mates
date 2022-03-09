@@ -1,10 +1,9 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { User, Restaurant, Menu } = require('../models/index');
+const withAuth = require('../utils/auth');
 
-// eventually include withAuth
-
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   console.log(req.session);
   if (!req.session.loggedIn) {
     res.redirect('/login');
@@ -13,7 +12,7 @@ router.get('/', async (req, res) => {
    res.render('shopping-cart', req.session);
 });
 
-router.get('/complete', (req, res) => {
+router.get('/complete', withAuth, (req, res) => {
   if (!req.session.loggedIn) {
     res.redirect('/login');
     return;

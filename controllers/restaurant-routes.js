@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Restaurant, Menu } = require('../models/index');
+const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   if (!req.session.loggedIn) {
     res.redirect('/login');
   }
@@ -23,7 +24,7 @@ router.get('/', async (req, res) => {
 });
 
 // page for single restaurant
-router.get('/:id', (req, res) => {
+router.get('/:id', withAuth, (req, res) => {
   if (!req.session.loggedIn) {
     res.redirect('/login');
     return;
