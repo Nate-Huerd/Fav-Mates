@@ -24,8 +24,6 @@ router.get('/complete', (req, res) => {
   }
   let date = new Date();
   res.render('order-complete', { date: date, grandTotal: req.session.grandTotal, loggedIn: req.session.loggedIn });
-  req.session.cart = [];
-  req.session.grandTotal = 0;
 })
 
 module.exports = router;
