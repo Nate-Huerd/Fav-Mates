@@ -4,7 +4,6 @@ async function finishOrderHandler(e) {
   if (response.ok) {
     document.location.replace('/restaurants');
   }
-  console.log(response);
 }
 
 document.querySelector('#finish-button').addEventListener('click', finishOrderHandler);

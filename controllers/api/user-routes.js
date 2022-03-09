@@ -43,7 +43,6 @@ router.post('/login', (req, res) => {
         user: dbUserData,
           message: 'You are logged in'
       });
-      console.log(req.session.username)
     })
   })
 })
@@ -62,7 +61,6 @@ router.post('/', (req, res) => {
       req.session.cart = [];
       res.json(dbUserData);
     })
-    console.log(req.session.username);
   })
   .catch(err => {
     console.log(err);
