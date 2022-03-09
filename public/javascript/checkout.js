@@ -1,5 +1,7 @@
 async function checkoutHandler(e) {  
   e.preventDefault(e);
+  document.body.style.cursor = 'progress';
+
   let total = new Number(document.querySelector('#sub-total').innerHTML);
   let deliveryFee = 4.5
   let tip;

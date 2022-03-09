@@ -2,6 +2,7 @@ let clicked = 0;
 let orderArray = [];
 
 async function orderToSession() {
+  document.body.style.cursor = 'progress';
   const response = await fetch('/api/users/order', {
     method: 'POST',
     body: JSON.stringify({
