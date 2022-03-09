@@ -23,7 +23,9 @@ router.get('/complete', (req, res) => {
     res.redirect('/');
   }
   let date = new Date();
-  res.render('order-complete', { date: date, grandTotal: req.session.grandTotal, loggedIn: req.session.loggedIn });
+  setTimeout(() => {
+    res.render('order-complete', { date: date, grandTotal: req.session.grandTotal, loggedIn: req.session.loggedIn });
+  },1000)
 })
 
 module.exports = router;

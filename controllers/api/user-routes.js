@@ -98,8 +98,10 @@ router.post('/order', (req, res) => {
     }
 
     req.session.cart = cart;
-    
-    res.json(req.session.cart)
+    setTimeout(() => {
+      res.json(req.session.cart)
+
+    },1000)
   }).catch(err => {
     console.log(err);
     res.status(500).json(err);
@@ -109,14 +111,18 @@ router.post('/order', (req, res) => {
 // add grand total to session
 router.post('/addTotal', (req, res) => {
   req.session.grandTotal = req.body.grandTotal;
-  res.json(req.session.grandTotal);
+  setTimeout(() => {
+    res.json(req.session.grandTotal);
+  },1000)
 });
 
 // empty shopping cart
 router.get('/empty', (req, res) => {
   req.session.cart = [];
   req.session.grandTotal = 0;
-  res.status(204).json({ message: 'Cart empty'});
+  setTimeout(() => {
+    res.status(204).json({ message: 'Cart empty'});
+  },1000)
 })
 
 // delete a user
