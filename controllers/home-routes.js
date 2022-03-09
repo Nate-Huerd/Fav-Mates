@@ -32,7 +32,6 @@ router.get('/about-us', (req, res) => {
 
 
 router.get('/', (req, res) => {
-  console.log(req.session);
   res.render('homepage', {
     loggedIn: req.session.loggedIn
   }); 

@@ -43,7 +43,6 @@ router.post('/login', (req, res) => {
         user: dbUserData,
           message: 'You are logged in'
       });
-      console.log(req.session.username)
     })
   })
 })
@@ -62,7 +61,6 @@ router.post('/', (req, res) => {
       req.session.cart = [];
       res.json(dbUserData);
     })
-    console.log(req.session.username);
   })
   .catch(err => {
     console.log(err);
@@ -98,8 +96,9 @@ router.post('/order', (req, res) => {
     }
 
     req.session.cart = cart;
-    
     res.json(req.session.cart)
+
+
   }).catch(err => {
     console.log(err);
     res.status(500).json(err);
@@ -117,6 +116,7 @@ router.get('/empty', (req, res) => {
   req.session.cart = [];
   req.session.grandTotal = 0;
   res.status(204).json({ message: 'Cart empty'});
+
 })
 
 // delete a user

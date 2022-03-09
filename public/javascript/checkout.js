@@ -1,5 +1,7 @@
 async function checkoutHandler(e) {  
   e.preventDefault(e);
+  document.body.style.cursor = 'progress';
+
   let total = new Number(document.querySelector('#sub-total').innerHTML);
   let deliveryFee = 4.5
   let tip;
@@ -18,7 +20,12 @@ async function checkoutHandler(e) {
     }),
     headers: { 'Content-Type': 'application/json'}
     });
-    if (response.ok) document.location.replace('/shopping-cart/complete');
+    
+    if (response.ok) {
+      setTimeout(() => {
+        document.location.replace('/shopping-cart/complete');
+      },1000)
+    }
     else console.log(response.statusText);
 }
 
