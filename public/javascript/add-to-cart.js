@@ -13,7 +13,9 @@ async function orderToSession() {
   });
 
   if (response.ok) {
+    setTimeout(() => {
       document.location.replace('/shopping-cart')
+    },1000)
   } else {
     console.log(response.statusText);
   }

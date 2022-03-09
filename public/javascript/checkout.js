@@ -18,7 +18,12 @@ async function checkoutHandler(e) {
     }),
     headers: { 'Content-Type': 'application/json'}
     });
-    if (response.ok) document.location.replace('/shopping-cart/complete');
+    
+    if (response.ok) {
+      setTimeout(() => {
+        document.location.replace('/shopping-cart/complete');
+      },1000)
+    }
     else console.log(response.statusText);
 }
 
