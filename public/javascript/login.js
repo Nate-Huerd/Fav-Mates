@@ -20,7 +20,7 @@ async function login(e) {
     }
   }
 
-  if (username && password >= 4) {
+  if (username && password.length >= 4) {
     // make api call to login the user
     const response = await fetch('/api/users/login', {
       method: 'POST',

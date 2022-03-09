@@ -9,7 +9,9 @@ router.get('/', withAuth, async (req, res) => {
     res.redirect('/login');
     return;
   }
-   res.render('shopping-cart', req.session);
+  setTimeout(() => {
+    res.render('shopping-cart', req.session);
+  },1000)
 });
 
 router.get('/complete', withAuth, (req, res) => {
@@ -21,6 +23,7 @@ router.get('/complete', withAuth, (req, res) => {
   if (!req.session.grandTotal) {
     res.redirect('/');
   }
+  
   let date = new Date();
   setTimeout(() => {
     res.render('order-complete', { date: date, grandTotal: req.session.grandTotal, loggedIn: req.session.loggedIn });
