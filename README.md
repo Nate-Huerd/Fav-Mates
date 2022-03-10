@@ -23,7 +23,7 @@ Kyler: Frontend Design/API Routes
 https://lit-mountain-78827.herokuapp.com/
 
 ## Usage
-Copy the link above and paste into a new browser tab. The first thing that you should do is Sign Up. Do so by clicking Account in the top right of the page, choose Login from the dropdown, then switch to Sign Up.
+Copy the link above and paste into a new browser tab. The first thing that you should do is Sign Up. Do so by clicking Account in the top right of the page, choose Login from the dropdown, then switch to Sign Up. Select a restaurant and add menu items to your cart. When you are done, click Checkout.
 
 ## Roadmap
 - [ ] Allows restaurant owners ability to add/remove items, and edit prices of items
