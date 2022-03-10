@@ -1,13 +1,18 @@
 <div class="menu-items">
   {{#each this}}
-  <section class="single-item">
-    <p>{{name}}</p>
-    <p>$<span class="item-preview-price"></span>{{formatCurrency price}}</p>
-    <label for="{{name}}"></label>
-    <input type="number" class="amount" name="name"
-       min="1" max="10" default="1" value="1">
+  <div class="mui-divider"></div>
 
-    <button class="add-to-cart" data-id="{{id}}">Add to Cart</button>
+  <section class="single-item">
+    <div class="name-price">
+      <p>{{name}}</p>
+      <p>$<span class="item-preview-price"></span>{{formatCurrency price}}</p>
+    </div>
+    <div class="add-quantity">
+      <label for="{{name}}"></label>
+      <input type="number" class="amount" name="name"
+       min="1" max="10" default="1" value="1">
+      <button class="add-to-cart" data-id="{{id}}">Add to Cart</button>
+    </div>
   </section>
   {{/each}}
 </div>
