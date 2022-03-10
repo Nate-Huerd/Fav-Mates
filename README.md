@@ -46,4 +46,15 @@ To contribute to this project, please follow the "fork-and-pull" Git workflow.
 NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 
 ## Contact
+Colin Bares
+  Email: colinedwinbares@gmail.com
+  
+Kyler Mclachlan
+  Email: kyler.mclachlan@gmail.com
+  
+Nate Huerd
+  Email: nhuerd3@gmail.com
+  
+Yasemin Akturk
+  Email: yasemina93@gmail.com
 
