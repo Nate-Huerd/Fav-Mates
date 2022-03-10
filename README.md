@@ -16,8 +16,8 @@ CSS Framework   | Template Engine   | New Package   | Deployed App
 MUI             | Handlebars        | Restaurant-menu | Heroku
 
 ## Roles
-Colin/Nate: Backend/Frontend Development
-Kyler: Frontend Design/API Routes
+* Colin/Nate: Backend/Frontend Development
+* Kyler: Frontend Design/API Routes
 
 ## Deployed App (Heroku)
 https://lit-mountain-78827.herokuapp.com/
@@ -48,15 +48,15 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 ## Contact
 Each project owner's preferred contact method is listed below.
 
-Colin Bares
+* Colin Bares
   Email: colinedwinbares@gmail.com
   
-Kyler Mclachlan
+* Kyler Mclachlan
   Email: kyler.mclachlan@gmail.com
   
-Nate Huerd
+* Nate Huerd
   Email: nhuerd3@gmail.com
   
-Yasemin Akturk
+* Yasemin Akturk
   Email: yasemina93@gmail.com
 
