@@ -23,12 +23,24 @@ Kyler: Frontend design/API Routes
 ## Usage
 
 ## Roadmap
+- [ ] Allows restaurant owners ability to add/remove items, and edit prices of items.
+- [ ] Add live messaging between Users and Drivers.
+- [ ] Add a search bar with predictive text to match restaurants in the database.
+- [ ] Track how many times items are ordered to accurately suggest “favorites” by restaurant.
+- [ ] Separate Restaurant Owner portal for restaurants to manage their menus.
+- [ ] Store User order history.
 
 ## Contributing
 
+Please refer to the project's style and contribution guidelines for submitting patches and additions. In general, we follow the "fork-and-pull" Git workflow.
+
+1. Fork the repo on GitHub
+2. Clone the project to your local machine
+3. Commit the changes to your own branch
+4. Push your work back up to your fork
+5. Submit a Pull request so that we can review your changes
+
+NOTE: Be sure to merge the latest from "upstream" before making a pull request!
+
 ## Contact
 
-
-CSS Framework   | Template Engine   | New Package   | Deployed App
---------------  | --------------    | -----------   | ------------
-MUI             | Handlebars        | Restaurant-menu | Heroku
