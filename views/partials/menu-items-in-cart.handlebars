@@ -1,0 +1,21 @@
+<style>
+.item-preview-price{
+  align-self: end; 
+  }
+.mui-container{
+    background-color: aliceblue;
+    width: 250px;
+}  
+</style>
+<div class="popular-items">
+{{#each this}}
+<section>
+    <p >
+    {{#if quantity}}
+    {{quantity}})
+    {{/if}}
+    {{name}}
+    $<span class="item-preview-price">{{formatCurrency price}}</span></p>
+</section>
+{{/each}}
+</div>
