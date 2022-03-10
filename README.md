@@ -13,7 +13,7 @@ As a User I want to be able to connect to and order from local restaurants by me
 ## Built With
 
 CSS Framework   | Template Engine   | New Package   | Deployed App
---------------  | --------------    | -----------   | ------------
+:-------------- | :--------------   | :-----------  | :-----------
 MUI             | Handlebars        | Restaurant-menu | Heroku
 
 ## Roles
