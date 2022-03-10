@@ -5,10 +5,10 @@
 Fav Mates is a user friendly platform that connects hungry users to local restaurants.
 
 #### Developer Motivation:
-To challenge ourselves to create a platform that many app/web users are familiar with, and deepen our understanding of MVC fundamentals. 
+To challenge ourselves to create a platform that many app/web users are familiar with and deepen our understanding of MVC fundamentals. 
 
 #### User Story: 
-As a User I want to be able to connect to and order from local restaurants by me. I would prefer to have many restaurants to choose from, and be able to easily view some popular items and prices. When I checkout I want to see the items in my order, the total price, and the estimated time for delivery. 
+As a User I want to be able to connect to and order from local restaurants by me. I would prefer to have many restaurants to choose from and be able to easily view some popular items and prices. When I checkout, I want to see the items in my order, the total price, and the estimated time for delivery. 
 
 ## Built With
 CSS Framework   | Template Engine   | New Package   | Deployed App
@@ -16,8 +16,8 @@ CSS Framework   | Template Engine   | New Package   | Deployed App
 MUI             | Handlebars        | Restaurant-menu | Heroku
 
 ## Roles
-Colin/Nate: backend/frontend development
-Kyler: Frontend design/API Routes
+Colin/Nate: Backend/Frontend Development
+Kyler: Frontend Design/API Routes
 
 ## Deployed App (Heroku)
 https://lit-mountain-78827.herokuapp.com/
@@ -26,12 +26,13 @@ https://lit-mountain-78827.herokuapp.com/
 Copy the link above and paste into a new browser tab. The first thing that you should do is Sign Up. Do so by clicking Account in the top right of the page, choose Login from the dropdown, then switch to Sign Up.
 
 ## Roadmap
-- [ ] Allows restaurant owners ability to add/remove items, and edit prices of items.
-- [ ] Add live messaging between Users and Drivers.
-- [ ] Add a search bar with predictive text to match restaurants in the database.
-- [ ] Track how many times items are ordered to accurately suggest “favorites” by restaurant.
-- [ ] Separate Restaurant Owner portal for restaurants to manage their menus.
-- [ ] Store User order history.
+- [ ] Allows restaurant owners ability to add/remove items, and edit prices of items
+- [ ] Add live messaging between Users and Drivers
+- [ ] Add a search bar with predictive text to match restaurants in the database
+- [ ] Track how many times items are ordered to accurately suggest “favorites” by restaurant
+- [ ] Separate Restaurant Owner portal for restaurants to manage their menus
+- [ ] Store User order history
+- [ ] Add restaurant logo tiles and images of some of the menu items
 
 ## Contributing
 To contribute to this project, please follow the "fork-and-pull" Git workflow.
