@@ -1,13 +1,26 @@
+<style>
+  .bold{
+    font-weight: bolder;
+  }
+.mui-container{
+  margin-top: 5vw;
+  border-radius: 25px;
+  padding: 10px;
+  border-right: 2px  medium solid white;
+  border-bottom: 2px  medium solid white;
+}
+</style>
+
 {{!-- rendered with session object? will have username and cart info --}}
-<section id="checkout-section">
-  <h2>{{username}}'s Cart</h2>
+<section class="mui-container" align="left" id="checkout-section">
+  <h2 class="username">{{username}}'s Cart</h2>
   {{!-- checkCart is a helper function that returns true if cartArray is not empty --}}
   {{#if cart}}
-  <p>You have {{checkCount cart}} items in your cart.</p>
-  {{>menu-items-preview cart}}
+  <p class="bold">You have {{checkCount cart}} items in your cart.</p>
+  {{>menu-items-in-cart cart}}
   {{!-- totalItems is a helper function that will --}}
   {{!-- add up the price value of each item in the cart --}}
-  <p>Your order comes to $<span id="sub-total">{{formatCurrency (totalItems cart) }}</span></p>
+  <p class='bold'>Your order comes to $<span id="sub-total">{{formatCurrency (totalItems cart) }}</span></p>
 
   <form id="order-form">
   <p>Please tip your driver!</p>
@@ -27,7 +40,7 @@
     </div>
     <p>Delivery Fee: $<span id="delivery-fee">4.50</span></p>
 
-    <button id="confirm-order">Continue</button>
+    <button class='mui-btn mui-btn--primary' id="confirm-order">Continue</button>
   </form>
 
 
