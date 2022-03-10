@@ -27,11 +27,11 @@ Copy the link above and paste into a new browser tab. The first thing that you s
 
 ## Roadmap
 - [ ] Allows restaurant owners ability to add/remove items, and edit prices of items
-- [ ] Add live messaging between Users and Drivers
+- [ ] Add live messaging between users and drivers
 - [ ] Add a search bar with predictive text to match restaurants in the database
 - [ ] Track how many times items are ordered to accurately suggest “favorites” by restaurant
-- [ ] Separate Restaurant Owner portal for restaurants to manage their menus
-- [ ] Store User order history
+- [ ] Separate restaurant owner portal for restaurants to manage their menus
+- [ ] Store user order history
 - [ ] Add restaurant logo tiles and images of some of the menu items
 
 ## Contributing
@@ -46,6 +46,8 @@ To contribute to this project, please follow the "fork-and-pull" Git workflow.
 NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 
 ## Contact
+Each project owner's preferred contact method is listed below.
+
 Colin Bares
   Email: colinedwinbares@gmail.com
   
