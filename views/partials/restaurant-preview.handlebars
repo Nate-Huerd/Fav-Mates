@@ -11,8 +11,12 @@
   }
 .restaurant-name{
   font-size: 2em;
-}  
+}
+
 </style>
+<div class="image-container">
+  <img src="/assets/{{imageUrl}}" alt="" width="200px">
+</div>
 <article class='restaurant'>
   <a href="/restaurants/{{id}}"><h2 class="restaurant-name"> {{name}}</h2></a> 
     {{>menu-items-preview menus}}

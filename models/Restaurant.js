@@ -15,6 +15,11 @@ Restaurant.init({
     allowNull: false,
     unique: true,
   },
+  imageUrl: {
+    type: DataTypes.STRING,
+    allowNull: true,
+    unique: true
+  }
 },
 {
   sequelize,

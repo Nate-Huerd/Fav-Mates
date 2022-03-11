@@ -37,4 +37,8 @@ router.get('/', (req, res) => {
   }); 
 })
 
+router.get('/image', (req, res) => {
+  let src = './assets/cheesey.jpg';
+  res.render('testImage', {  });
+})
 module.exports = router;

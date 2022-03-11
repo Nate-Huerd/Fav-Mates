@@ -397,10 +397,14 @@ const menuItems = [
   },
 ];
 
+
+
+
 function itemArrayFromMenuObject(menuObj) {
   let nameArray = menuObj.items;
   let priceArray = menuObj.price;
   let restaurant_id = menuObj.restaurant_id;
+
   let itemArray = [];
   for (let i = 0; i < nameArray.length; i++) {
     let newMenuItem = {
