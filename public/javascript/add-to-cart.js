@@ -27,6 +27,9 @@ function addToCart(e) {
 
     if (!clicked) {
       let checkoutBtn = document.createElement('button');
+      checkoutBtn.classList.add('mui-btn');
+      checkoutBtn.classList.add('mui-btn--large');
+      checkoutBtn.classList.add('mui-btn--primary');
       checkoutBtn.textContent = 'Check Out';
       document.querySelector('.menu-items').appendChild(checkoutBtn);
       checkoutBtn.addEventListener('click', orderToSession);
