@@ -32,10 +32,13 @@ router.get('/about-us', (req, res) => {
 
 
 router.get('/', (req, res) => {
-  console.log(req.session);
   res.render('homepage', {
     loggedIn: req.session.loggedIn
   }); 
 })
 
+router.get('/image', (req, res) => {
+  let src = './assets/cheesey.jpg';
+  res.render('testImage', {  });
+})
 module.exports = router;

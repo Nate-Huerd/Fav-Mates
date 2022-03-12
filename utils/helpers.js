@@ -43,7 +43,13 @@ module.exports = {
     let meridian = 'AM';
     if (hours > 12) {
       hours -= 12;
+    }
+    if (hours >=12) {
       meridian = 'PM';
+    }
+
+    if (hours == 0) {
+      hours = 12
     }
 
     let minutes = newDateObj.getMinutes();
@@ -56,8 +62,14 @@ module.exports = {
     let meridian = 'AM';
     if (hours > 12) {
       hours -= 12;
+    }
+    if (hours >= 12) {
       meridian = 'PM';
     }
+    if (hours == 0) {
+      hours = 12;
+    }
+
     let minutes = newDateObj.getMinutes();
     return `${hours}:${minutes.toString().padStart(2, 0)} ${meridian}`;
   },
@@ -68,8 +80,14 @@ module.exports = {
     let meridian = 'AM';
     if (hours > 12) {
       hours -= 12;
+    }
+    if (hours >= 12) {
       meridian = 'PM';
     }
+    if (hours == 0) {
+      hours = 12;
+    }
+
     let minutes = newDateObj.getMinutes();
     return `${hours}:${minutes.toString().padStart(2, 0)} ${meridian}`;
   }

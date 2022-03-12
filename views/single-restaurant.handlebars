@@ -22,13 +22,25 @@
 }
 
 .mui-btn--primary {
-  width: 50%;
+  width: 100%;
   display: block;
   margin: 5vh auto;
 }
+.image{
+  border-radius: 20%;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 </style>
 <div class="single-restaurant-card">
+  <div class='mui-container'>
+  <img class="image" width="90%" height="45%" src="/assets/{{restaurant.imageUrl}}" alt="">
+  </div>
   <h2 class="restaurant-name">{{restaurant.name}}</h2>
   {{>menu-items restaurant.menus}}
+
 </div>

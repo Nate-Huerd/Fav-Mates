@@ -8,7 +8,7 @@ router.get('/', withAuth, async (req, res) => {
     res.redirect('/login');
   }
   Restaurant.findAll({
-    attributes: ['id', 'name'],
+    attributes: ['id', 'name', 'imageUrl'],
     include: [
       {
         model: Menu,
@@ -33,7 +33,7 @@ router.get('/:id', withAuth, (req, res) => {
     where: {
       id: req.params.id
     },
-    attributes: ['id', 'name'],
+    attributes: ['id', 'name', 'imageUrl'],
     include: [
       {
         model: Menu,
