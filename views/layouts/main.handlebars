@@ -6,7 +6,8 @@
       font-family:Verdana, Geneva, Tahoma, sans-serif;
     }
     .footer{
-      margin-top: 20em;
+      margin-top: 35em;
+      display: flex;
     }
     .body_color{
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(40, 122, 245));
@@ -22,6 +23,7 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="//cdn.muicss.com/mui-latest/extra/mui-colors.min.css">
     <link rel="stylesheet" href="../../public/stylesheets/style.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
     <script src="//cdn.muicss.com/mui-latest/extra/mui-combined.min.js"></script>
   </head>
   <body class="body_color">
@@ -32,7 +34,7 @@
             <td class="header_title"mui--appbar-height align="left"> Fav Mates</td>
             <td class=""mui--appbar-height align="right">
               <div class="mui-dropdown">
-              <button class="mui-btn mui-btn--primary" data-mui-toggle="dropdown">
+              <button id="dropdown" class="mui-btn mui-btn--primary" data-mui-toggle="dropdown">
                 Account
                 <span class="mui-caret"></span>
               </button>
@@ -58,7 +60,7 @@
     </main>
     <footer class="footer">
       <div class="mui-container mui--text-center mui--text-bottom">
-        Made with ♥ by <a href="doordash.com"> The Fav Mates Team</a>
+        Made with ♥ by <a href="/"> The Fav Mates Team</a>
       </div>
     </footer>
     <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
