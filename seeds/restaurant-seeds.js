@@ -83,10 +83,14 @@ let imgSrcArray = [
   'resturant_1.jpg',
   'resturant_2.jpg',
   'smile.jpg',
-  'spoon_and-fork.jpg',
+  'spoon-and-fork.jpg',
   'stir-fried-tofu.jpg',
   'sun-and-moon.jpg',
   'tempura.jpg',
+  'waffle.jpg',
+  'munching.jpg',
+  'open-area.jpg',
+  'ramen.jpg',
 ];
 
 let restaurantList = [];
@@ -101,7 +105,7 @@ for (let i = 0; i < restaurantData.length; i++) {
   restaurantList.push(restaurant);
 }
 
-console.log(restaurantList);
+// console.log(restaurantList);
 
 const seedRestaurants = () => Restaurant.bulkCreate(restaurantList);
 

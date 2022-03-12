@@ -16,6 +16,7 @@
 background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(40, 122, 245));
 margin-bottom: -4em;
 }
+
 </style>
 
 {{!-- rendered with session object? will have username and cart info --}}
@@ -54,6 +55,6 @@ margin-bottom: -4em;
 <script src="/javascript/checkout.js"></script>
   {{else}}
   <p>You have no items in your cart</p>
-  <a href="/restaurants"><button>Start Order</button></a>
+  <a href="/restaurants"><button class="mui-btn mui-btn--primary">Start Order</button></a>
   {{/if}}
 </section>
