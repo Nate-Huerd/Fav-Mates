@@ -67,7 +67,43 @@ const restaurantData = [
   },
 ];
 
-const seedRestaurants = () => Restaurant.bulkCreate(restaurantData);
 
-seedRestaurants();
+let imgSrcArray = [
+  'bar-and-lounge.jpg',
+  'cheesey.jpg',
+  'chef-hat.jpg',
+  'cherry-tomato.jpg',
+  'food-truck.jpg',
+  'healthy.jpg',
+  'kid-burger.jpg',
+  'mexican.jpg',
+  'organic-lorem-ipsum.jpg',
+  'pizza.jpg',
+  'restaurant-lorem-ipsum.jpg',
+  'resturant_1.jpg',
+  'resturant_2.jpg',
+  'smile.jpg',
+  'spoon_and-fork.jpg',
+  'stir-fried-tofu.jpg',
+  'sun-and-moon.jpg',
+  'tempura.jpg',
+];
+
+let restaurantList = [];
+
+for (let i = 0; i < restaurantData.length; i++) {
+  let name = restaurantData[i].name;
+  let image = imgSrcArray[i];
+  let restaurant = {
+    name: name,
+    imageUrl: image || null
+  }
+  restaurantList.push(restaurant);
+}
+
+console.log(restaurantList);
+
+const seedRestaurants = () => Restaurant.bulkCreate(restaurantList);
+
+// seedRestaurants();
 module.exports = seedRestaurants;
