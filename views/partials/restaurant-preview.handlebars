@@ -12,13 +12,19 @@
 .restaurant-name{
   font-size: 2em;
 }
-
+.image{
+  image-rendering: optimizeQuality;
+  image-rendering: crisp-edges;
+  border-radius: 20%;
+}
 </style>
-<div class="image-container">
-  <img src="/assets/{{imageUrl}}" alt="" width="200px">
-</div>
+
 <article class='restaurant'>
+  <div class="image-container">
+  <img class="image" src="/assets/{{imageUrl}}" alt="" width="250" height="200px">
+</div>
   <a href="/restaurants/{{id}}"><h2 class="restaurant-name"> {{name}}</h2></a> 
+  <img class="someClass" src="{{imgURL}}">
     {{>menu-items-preview menus}}
 </article>
 

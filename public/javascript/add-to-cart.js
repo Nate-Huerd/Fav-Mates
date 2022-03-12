@@ -30,6 +30,7 @@ function addToCart(e) {
       checkoutBtn.classList.add('mui-btn');
       checkoutBtn.classList.add('mui-btn--large');
       checkoutBtn.classList.add('mui-btn--primary');
+      checkoutBtn.style.width ="30%";
       checkoutBtn.textContent = 'Check Out';
       document.querySelector('.menu-items').appendChild(checkoutBtn);
       checkoutBtn.addEventListener('click', orderToSession);
