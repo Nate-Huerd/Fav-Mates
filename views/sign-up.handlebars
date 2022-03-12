@@ -1,0 +1,122 @@
+
+<style>
+.sign-up-form{
+  background-color: white; 
+  border-radius: 40px;
+  margin-top: 5em;
+  width: 23em;
+  height: 32em;
+  padding-top: .2em;
+  padding-left: .2em;
+  margin-bottom: 8em;
+}
+
+.sign-up-button{
+  background-color: #A6A6A6;
+}
+
+.sign-up-header{
+  font-size: 2em;
+  color: black;
+  width: fit-content;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 1.5em;
+  margin-top: 1em;
+  font-weight: bolder;
+  }
+
+.sign-up-fonts{
+  font-size: 1em;
+  height: fit-content;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.Username-sign-up-div{
+  margin-bottom: 2em;
+  padding-top: 1em;
+  border-top: white;
+  border-right: white;
+  border-left: white;
+  font-size: x-small;
+  width: 18.5em;
+}
+
+.password-sign-up-div{
+  padding-top: 1em;
+  border-top: white;
+  border-right: white;
+  border-left: white;
+  font-size: x-small;
+  width: 18.5em;
+}
+
+.password_text{
+  font-size: .75em;
+  margin-bottom: -.06em;
+  margin-right: 13em;
+  font-style: italic;
+}
+
+.Username_text{
+  font-size: .75em;
+  margin-bottom: -.06em;
+  margin-right: 12.8em;
+  font-style: italic;
+}
+
+.sign-up-button-style{
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.sign-up-fonts-signup{
+  font-size: small;
+  height: fit-content;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin-top:3em;
+}
+
+.body_color{
+background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(40, 122, 245));
+margin-bottom: -1.7em;
+}
+
+.sign-up-text{
+  font-size: x-small;
+}
+
+.mui-btn.mui--is-disabled, .mui-btn:disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: .6;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: 15em;
+}
+</style>
+<body class="body_color">
+<div class="mui-container"align="center">
+  <form class="sign-up-form">
+    <h1 class="sign-up-header">
+      Sign Up
+    </h1>
+    <div class="sign-up-fonts">
+      <label for="Username-sign-up"></label>
+      <p class="Username_text">Username</p>
+      <input type="text" id="username-signup" class="Username-sign-up-div" placeholder="Enter your Username here" />
+    </div>
+    <div class="sign-up-fonts">
+      <label for="password-sign-up"></label>
+      <p class="password_text">Password</p>
+      <input type="password" id="password-signup" class="password-sign-up-div"  placeholder="Enter your Password here" />
+    </div>
+    <div class = "sign-up-button-style">
+      <button class="mui-btn mui-btn--large mui-btn--primary mui-btn--raised" type="submit">sign-up</button>
+    </div> 
+    <p class="sign-up-text">Or Log In Using</p>
+    <a class="login-fonts-signup" href="/login">LOG IN</a>
+  </form>
+</div>
+</body>
+
+<script src="/javascript/sign-up.js"></script>
+<script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>

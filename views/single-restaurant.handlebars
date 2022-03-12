@@ -1,0 +1,34 @@
+<style>
+  h2 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 5vh;
+  }
+
+  .single-item {
+    margin: 2.5vh 5vw;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .single-restaurant-card{
+  margin: 10vh auto;
+  border-radius: 25px;
+  padding: 10px;
+  background-color: white;
+  width: 80%;
+}
+
+.mui-btn--primary {
+  width: 50%;
+  display: block;
+  margin: 5vh auto;
+}
+
+</style>
+<div class="single-restaurant-card">
+  <h2 class="restaurant-name">{{restaurant.name}}</h2>
+  {{>menu-items restaurant.menus}}
+</div>

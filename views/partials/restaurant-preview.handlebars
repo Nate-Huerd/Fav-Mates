@@ -1,0 +1,32 @@
+<style>
+.restaurant{
+  margin: 1vw;
+  background-color: aliceblue;
+  padding: 1vw;
+  border: solid 1mm #CCDFFC;
+  border-radius: 25px;
+  flex-wrap: nowrap;
+  text-align: center;
+  width: 20em;
+  }
+.restaurant-name{
+  font-size: 2em;
+}  
+</style>
+<article class='restaurant'>
+  <a href="/restaurants/{{id}}"><h2 class="restaurant-name"> {{name}}</h2></a> 
+    {{>menu-items-preview menus}}
+</article>
+
+<!-- restaurant logos
+
+<img src"./public/assets/bar-and-lounge" alt="bar and lounge restaurant"/>
+<img src"./public/assets/chef-hat" alt="chef hat restaurant"/>
+<img src"./public/assets/food-truck" alt="food truck"/>
+<img src"./public/assets/mexican" alt="Mexican style restaurant"/>
+<img src"./public/assets/organic-lorem-ipsum" alt="lorem ipsum's organic restaurant"/>
+<img src"./public/assets/restaurant-lorem-ipsum" alt="lorem ipsum restaurant"/>
+<img src"./public/assets/smile" alt="Smiley chef's restaurant"/>
+<img src"./public/assets/spoon-and-fork" alt="spoon and fork restaurant"/>
+<img src"./public/assets/sun-and-moon" alt="sun-and-moon restaurant"/>
+-->
