@@ -6,13 +6,18 @@
       font-family:Verdana, Geneva, Tahoma, sans-serif;
     }
     .footer{
-      margin-top: 35em;
-      display: flex;
+      margin-top: 20em;
     }
     .body_color{
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(40, 122, 245));
     margin-bottom: -1.7em;
     }
+
+    #home-link{
+      color: white;
+      text-decoration: none;
+    }
+
   </style>
   <head>
     <meta charset="utf-8">
@@ -23,7 +28,6 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="//cdn.muicss.com/mui-latest/extra/mui-colors.min.css">
     <link rel="stylesheet" href="../../public/stylesheets/style.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
     <script src="//cdn.muicss.com/mui-latest/extra/mui-combined.min.js"></script>
   </head>
   <body class="body_color">
@@ -31,10 +35,10 @@
       <div class="mui-appbar">
         <table width="100%">
           <tr style="vertical-align:middle;">
-            <td class="header_title"mui--appbar-height align="left"> Fav Mates</td>
+            <td class="header_title"mui--appbar-height align="left"><a href="/" id="home-link">Fav Mates</a> </td>
             <td class=""mui--appbar-height align="right">
               <div class="mui-dropdown">
-              <button id="dropdown" class="mui-btn mui-btn--primary" data-mui-toggle="dropdown">
+              <button class="mui-btn mui-btn--primary" data-mui-toggle="dropdown">
                 Account
                 <span class="mui-caret"></span>
               </button>
@@ -60,7 +64,7 @@
     </main>
     <footer class="footer">
       <div class="mui-container mui--text-center mui--text-bottom">
-        Made with ♥ by <a href="/"> The Fav Mates Team</a>
+        Made with ♥ by <a href="doordash.com"> The Fav Mates Team</a>
       </div>
     </footer>
     <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
