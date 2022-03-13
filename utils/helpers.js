@@ -41,11 +41,11 @@ module.exports = {
     var newDateObj = new Date(date.getTime() + 20 * 60000);
     let hours = newDateObj.getHours();
     let meridian = 'AM';
-    if (hours > 12) {
-      hours -= 12;
-    }
     if (hours >=12) {
       meridian = 'PM';
+    }
+    if (hours > 12) {
+      hours -= 12;
     }
 
     if (hours == 0) {
@@ -60,11 +60,11 @@ module.exports = {
     var newDateObj = new Date(date.getTime() + 40 * 60000);
     let hours = newDateObj.getHours();
     let meridian = 'AM';
-    if (hours > 12) {
-      hours -= 12;
-    }
     if (hours >= 12) {
       meridian = 'PM';
+    }
+    if (hours > 12) {
+      hours -= 12;
     }
     if (hours == 0) {
       hours = 12;
@@ -78,11 +78,11 @@ module.exports = {
     var newDateObj = new Date(date.getTime() + 60 * 60000);
     let hours = newDateObj.getHours();
     let meridian = 'AM';
-    if (hours > 12) {
-      hours -= 12;
-    }
     if (hours >= 12) {
       meridian = 'PM';
+    }
+    if (hours > 12) {
+      hours -= 12;
     }
     if (hours == 0) {
       hours = 12;
