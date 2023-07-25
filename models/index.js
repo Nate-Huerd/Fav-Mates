@@ -10,4 +10,4 @@ Menu.belongsTo(Restaurant, {
     foreignKey: 'restaurant_id',
 });
 
-module.exports = { User, Menu, Restaurant };
+module.exports = { User, Menu, Restaurant }
